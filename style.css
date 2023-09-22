@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #3e4144;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.calculadoraPadre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.calculadora{
+    display: grid;
+    grid-template-columns: repeat(4,75px); /* 4 columnas de 75 pixeles*/
+    grid-template-rows: 160px repeat(6, 75px);
+    background-color: #535e69;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 20px 10px 0px 5px #00000033;
+}
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    box-shadow: 5px 5px 10px -3px #5e5137,/*sombra derecha abajo negra*/
+    -5px -5px 15px 3px #4b3e55; /* sombra blanca de iz y arriba*/
+}
+button:active{
+    background-color: #dad7d0;
+    color: black;
+}
+
+button:focus{
+    outline: none;
+}
+.col-2{
+    grid-column: span 2; /* para que se vaya a dos columans y ocupe 2*/
+}
+.pantalla{
+    grid-column: 1 / -1;/*para que vaya de una punta a la otra*/
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    background-color: #3b4744;
+    border-radius: 32px;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+#pantallaResultado{
+    font-size: 2em;
+    align-items: start;
+    text-align: right;
+    background-color: #3b4744;
+}
+#pantallaCalculo{
+    font-size: 2em;
+    align-items: flex-end;
+    text-align: right;
+    background-color: #3b4744;
+}
+.operador{
+    background-color: #6b3892;
+}
+.operadorSinFuncion{
+    background-color: #6b3892;
+}
+.igual{
+    background-color: #952de7 ;
+}
+.ac{
+    background-color: #efb945;
+}
+.borrar{
+    background-color: #efb945;
+}
